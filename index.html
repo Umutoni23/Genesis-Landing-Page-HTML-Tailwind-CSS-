@@ -9,19 +9,10 @@
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Optional Tailwind Config -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#D10A8A',
-            secondary: '#2E08CF',
-          },
-        }
-      }
-    }
-  </script>
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute top-0 left-0 w-[600px] h-[600px] bg-orange-500/40 rounded-full blur-[160px]"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black via-blue-900/80 to-gray-900"></div>
+  </div>
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
@@ -32,8 +23,8 @@
   <span class="text-white font-bold text-xl">Genesis</span>
 </a>
     <div class="hidden md:flex items-center space-x-6">
-      <a href="#!" class="hover:text-gray-300 transition">Home</a>
-      <a href="#agents" class="hover:text-gray-300 transition">Agents</a>
+      <a href="#!" class="hover:text-indigo-300 transition">Home</a>
+      <a href="#agents" class="hover:text-blue-300 transition">Agents</a>
       <a href="#use-cases" class="hover:text-gray-300 transition">Use Cases</a>
       <a href="#pricing" class="hover:text-gray-300 transition">Pricing</a>
       <a href="#docs" class="hover:text-gray-300 transition">Docs</a>
