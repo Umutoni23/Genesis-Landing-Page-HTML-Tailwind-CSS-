@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genesis - Tailwind SaaS Landing</title>
+  <link rel="icon" type="image/png" href="https://via.placeholder.com/32x32.png">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#D10A8A',
+            secondary: '#2E08CF',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 flex w-full items-center justify-between px-6 py-4 bg-gray-800/80 backdrop-blur-md">
+    <a href="#!" class="flex items-center gap-2">
+  <img src="icon.png" alt="logo" class="h-10 w-auto">
+  <span class="text-white font-bold text-xl">Genesis</span>
+</a>
+    <div class="hidden md:flex items-center space-x-6">
+      <a href="#!" class="hover:text-gray-300 transition">Home</a>
+      <a href="#agents" class="hover:text-gray-300 transition">Agents</a>
+      <a href="#use-cases" class="hover:text-gray-300 transition">Use Cases</a>
+      <a href="#pricing" class="hover:text-gray-300 transition">Pricing</a>
+      <a href="#docs" class="hover:text-gray-300 transition">Docs</a>
+      <a href="#!" class="bg-white text-gray-900 px-4 py-2 rounded-lg hover:bg-gray-100 transition">Sign Up</a>
+    </div>
+    <button id="menu-btn" class="md:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" class="text-white">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-black/80 text-lg font-medium backdrop-blur-lg -translate-x-full transition-transform duration-300 md:hidden">
+    <a href="#!">Home</a>
+    <a href="#agents">Agents</a>
+    <a href="#use-cases">Use Cases</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#docs">Docs</a>
+    <a href="#!" class="bg-white text-gray-900 px-4 py-2 rounded-lg hover:bg-gray-100">Sign Up</a>
+    <button id="close-btn" class="text-white text-2xl">×</button>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="text-center mt-20 px-6">
+    <p class="text-indigo-400 font-semibold">Smart, Fast, Always Active</p>
+    <h1 class="text-4xl md:text-6xl font-bold mt-4 max-w-3xl mx-auto">Build, Deploy & Talk to AI Agents in Seconds</h1>
+    <p class="text-gray-300 mt-4 max-w-md mx-auto">Design AI assistants that research, plan, and execute tasks  all powered by your prompts.</p>
+    <div class="flex flex-col md:flex-row justify-center gap-4 mt-6">
+      <button class="bg-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-500 transition">Create Agent</button>
+      <button class="bg-gray-700 px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-600 transition">
+        ▶ Watch Demo
+      </button>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section id="use-cases" class="mt-32 px-6">
+    <h2 class="text-3xl font-semibold text-center mb-6">Agent Features</h2>
+    <p class="text-gray-300 text-center max-w-md mx-auto mb-12">Design AI assistants that research, plan, and execute tasks — all powered by your prompts.</p>
+    <div class="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
+      <!-- Feature Card 1 -->
+      <div class="bg-gray-800 p-6 rounded-xl hover:-translate-y-1 transition">
+        <div class="text-4xl mb-3">🤖</div>
+        <h3 class="font-semibold text-xl mb-2">Autonomous Agents</h3>
+        <p class="text-gray-300">Agents that plan, execute & think step-by-step.</p>
+      </div>
+      <!-- Feature Card 2 -->
+      <div class="bg-gray-800 p-6 rounded-xl hover:-translate-y-1 transition">
+        <div class="text-4xl mb-3">🧠</div>
+        <h3 class="font-semibold text-xl mb-2">Memory & Learning</h3>
+        <p class="text-gray-300">Agents retain memory and improve over time.</p>
+      </div>
+      <!-- Feature Card 3 -->
+      <div class="bg-gray-800 p-6 rounded-xl hover:-translate-y-1 transition">
+        <div class="text-4xl mb-3">⚡</div>
+        <h3 class="font-semibold text-xl mb-2">Real-time Execution</h3>
+        <p class="text-gray-300">Fast responses with async task processing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call-to-Action Section -->
+  <section class="mt-32 text-center px-6 py-16 bg-gray-800/60 rounded-xl max-w-4xl mx-auto">
+    <h2 class="text-3xl font-semibold">Ready to build?</h2>
+    <p class="mt-4 text-gray-300">See how fast you can turn your ideas into reality. Get started for free, no credit card required.</p>
+    <button class="mt-6 bg-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-500 transition">Try Now</button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-32 px-6 py-10 text-center text-gray-400">
+    <p>&copy; 2026 Your Company. All rights reserved.</p>
+  </footer>
+
+  <!-- JS for mobile menu -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeBtn = document.getElementById('close-btn');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('-translate-x-full');
+    });
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('-translate-x-full');
+    });
+  </script>
+
+</body>
+</html>
